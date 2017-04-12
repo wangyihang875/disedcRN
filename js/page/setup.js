@@ -5,7 +5,7 @@ import {
 }from 'react-native'
 
 import LoginPage from './LoginPage'
-
+import Main from './Main'
 
 function setup(){
 
@@ -26,8 +26,8 @@ function setup(){
             return (
                 <Navigator
                     initialRoute={{
-                        name: 'LoginPage',
-                        component:LoginPage
+                        name: 'Main',
+                        component:Main
                     }}
                     renderScene={(e, i)=>this._renderScene(e, i)}
                 />

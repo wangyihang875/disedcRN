@@ -14,7 +14,7 @@ import {
 import CheckBox from 'react-native-checkbox';
 let totalHeight = Dimensions.get('window').height;
 let totalWidth = Dimensions.get('window').width;
-export default class BaseInfo extends Component{
+export default class HighPro extends Component{
     constructor(props) {
         super(props);
         this.state = {
@@ -38,8 +38,7 @@ export default class BaseInfo extends Component{
 
 var styles = StyleSheet.create({
     container:{
-        //flex:1,
-        marginLeft:12
+
     },
     titleView:{
         height:44,
@@ -55,8 +54,6 @@ var styles = StyleSheet.create({
     },
     infoView:{
         //flex:1
-        borderLeftWidth:1,
-        borderColor:'#e1e2e4',
     },
     infoLineView:{
         flexDirection:'row',

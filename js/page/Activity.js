@@ -23,7 +23,7 @@ export default class Activity extends Component{
 
     render(){
         return (
-            <View style={[styles.container,this.props.style[0]]}>
+            <View style={styles.container}>
                 <View style={styles.leftView}>
                     <View style={styles.titleView}><Text style={styles.titleText}>活动选择</Text></View>
 
@@ -39,6 +39,8 @@ export default class Activity extends Component{
 var styles = StyleSheet.create({
     container:{
         flex:1,
+        marginTop:24,
+        marginLeft:24,
         flexDirection:'row',
         // alignItems:'center',
         // justifyContent:'center'

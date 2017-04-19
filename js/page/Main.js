@@ -18,8 +18,8 @@ export default class Login extends Component{
     constructor(props) {
         super(props);
         this.state = {
-            isActivity:false,
-            isInfo:true,
+            isActivity:true,
+            isInfo:false,
             isUser:false,
         };
     }
@@ -57,8 +57,8 @@ export default class Login extends Component{
                 </View>
                 <View style={styles.rightView}>
                     <View style={styles.rightTopView}><Text>000</Text></View>
-                    <View>
-                        {this.state.isActivity ? <Activity style={[{marginTop: 24,marginLeft:24}]}/> : <View />}
+                    <View style={styles.rightMainView}>
+                        {this.state.isActivity ? <Activity /> : <View />}
                         {this.state.isInfo ? <Info /> : <View />}
                     </View>
                 </View>
@@ -76,10 +76,12 @@ var styles = StyleSheet.create({
     },
     leftView:{
         width:148,
+        borderRightWidth:1,
+        borderRightColor:'#e1e2e4',
     },
     rightView:{
         flex:1,
-        backgroundColor:'#d2d8e2',
+        //backgroundColor:'#d2d8e2',
     },
     leftFirstView:{
         alignItems:'center',
@@ -97,9 +99,14 @@ var styles = StyleSheet.create({
         borderTopColor:'#e1e2e4',
     },
     rightTopView:{
-        backgroundColor:'#8e949d',
+        //backgroundColor:'#8e949d',
         height:58,
-        opacity:0.1,
+        borderBottomWidth:1,
+        borderColor:'#e1e2e4',
+    },
+    rightMainView:{
+        flex:1,
+        backgroundColor:'#fbfbff',
     },
     touxiangView:{
         width:85,
